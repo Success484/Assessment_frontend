@@ -124,7 +124,7 @@ export default function TripForm() {
   );
 }
 
-function InputField({ label, id, value, onChange, error, type = "text" }) {
+function InputField({ label, id, value, onChange, error, placeholder, type = "text" }) {
   return (
     <div>
       <label htmlFor={id} className="font-semibold">
@@ -135,7 +135,8 @@ function InputField({ label, id, value, onChange, error, type = "text" }) {
         type={type}
         value={value}
         onChange={onChange}
-        className="border-2 bg-gray-100 rounded-full w-full px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        placeholder={placeholder}
+        className="border-2 bg-gray-100 rounded-full w-full px-4 py-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-500"
       />
       {error && <p className="text-xs text-red-600 mt-1">{error}</p>}
     </div>
