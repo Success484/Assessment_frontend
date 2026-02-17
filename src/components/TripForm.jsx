@@ -43,7 +43,7 @@ export default function TripForm() {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/trip/",
+        import.meta.env.VITE_API_URL,
         {
           ...form,
           current_cycle_used: parseFloat(form.current_cycle_used),
@@ -60,6 +60,8 @@ export default function TripForm() {
     } finally {
       setLoading(false);
     }
+    console.log(import.meta.env.VITE_API_URL);
+
   };
 
   return (
