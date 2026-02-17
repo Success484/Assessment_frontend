@@ -79,6 +79,7 @@ export default function TripForm() {
           label="Current Location"
           id="current_location"
           value={form.current_location}
+          placeholder="Austin, TX"
           onChange={(e) => updateField("current_location", e.target.value)}
           error={fieldErrors.current_location}
         />
@@ -87,6 +88,7 @@ export default function TripForm() {
           label="Pickup Location"
           id="pickup_location"
           value={form.pickup_location}
+          placeholder="Dellay, TX"
           onChange={(e) => updateField("pickup_location", e.target.value)}
           error={fieldErrors.pickup_location}
         />
@@ -95,6 +97,7 @@ export default function TripForm() {
           label="Dropoff Location"
           id="dropoff_location"
           value={form.dropoff_location}
+          placeholder="San Antonio, TX"
           onChange={(e) => updateField("dropoff_location", e.target.value)}
           error={fieldErrors.dropoff_location}
         />
@@ -104,6 +107,7 @@ export default function TripForm() {
           id="current_cycle_used"
           type="number"
           value={form.current_cycle_used}
+          placeholder="e.g. 20"
           onChange={(e) => updateField("current_cycle_used", e.target.value)}
           error={fieldErrors.current_cycle_used}
         />
